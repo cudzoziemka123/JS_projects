@@ -22,7 +22,6 @@ function changeBackground(number) {
       return previousBackground === 'background-3'
         ? false
         : body.classList.add('background-3')
-
     default:
       break
   }
