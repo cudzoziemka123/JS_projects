@@ -60,8 +60,6 @@ function createDOMNodes(page) {
       addToFav.textContent = "Add to favorites";
       addToFav.setAttribute("onclick", `saveFavorite('${result.url}')`);
     }
-
-    addToFav.setAttribute("onclick", `saveFavorite('${result.url}')`);
     // Explanation
     const explanation = document.createElement("p");
     explanation.classList.add("card-text");
@@ -129,7 +127,6 @@ function saveFavorite(itemUrl) {
 // Remove item from Favorites
 function removeFavorite(itemUrl) {
   if (favorites[itemUrl]) {
-    console.log(favorites[itemUrl]);
     delete favorites[itemUrl];
     //   Set Favorites in localStorage
     localStorage.setItem("nasaFavorites", JSON.stringify(favorites));
